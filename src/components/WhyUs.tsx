@@ -19,7 +19,7 @@ const reasons = [
 ];
 
 const WhyUs = () => (
-  <section id="why-us" className="bg-secondary/30 py-20">
+  <section id="why-us" className="bg-secondary/40 py-20">
     <div className="container">
       <h2 className="mb-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
         WHY HELPING HAND?

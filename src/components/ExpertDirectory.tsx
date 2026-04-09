@@ -5,12 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 
 const experts = [
-  { name: "Arjun Mehta", skill: "Video Editor", badge: "Podcast Editing", rating: 4.9, price: "₹800/hr", img: "https://i.pravatar.cc/150?img=11" },
-  { name: "Priya Sharma", skill: "Resume Writer", badge: "Executive CVs", rating: 4.8, price: "₹1,500/project", img: "https://i.pravatar.cc/150?img=5" },
-  { name: "Rohan Das", skill: "Video Editor", badge: "Social Media", rating: 4.7, price: "₹600/hr", img: "https://i.pravatar.cc/150?img=12" },
-  { name: "Sneha Iyer", skill: "Resume Writer", badge: "ATS-Optimized", rating: 4.9, price: "₹1,200/project", img: "https://i.pravatar.cc/150?img=9" },
-  { name: "Karan Singh", skill: "Video Editor", badge: "Corporate Branding", rating: 4.6, price: "₹1,000/hr", img: "https://i.pravatar.cc/150?img=53" },
-  { name: "Ananya Rao", skill: "Resume Writer", badge: "Creative Portfolios", rating: 4.8, price: "₹2,000/project", img: "https://i.pravatar.cc/150?img=26" },
+  { name: "Shiven Mishra", skill: "CV Maker", badge: "Resume Building", rating: 5.0, price: "Contact on Instagram", img: "https://i.pravatar.cc/150?img=11" },
+  { name: "Aman Singh", skill: "Video Editor", badge: "Video Editing", rating: 5.0, price: "Contact on Instagram", img: "https://i.pravatar.cc/150?img=12" },
 ];
 
 const ExpertDirectory = () => {

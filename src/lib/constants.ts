@@ -1,0 +1,1 @@
+export const INSTAGRAM_URL = "https://www.instagram.com/helpinghand.io?utm_source=qr&igsh=MXZjeDlpZmJiZjJiZw%3D%3D";

@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 const Footer = () => (
   <footer className="border-t border-border bg-background py-12">
@@ -11,7 +12,7 @@ const Footer = () => (
         <a href="#why-us" className="hover:text-foreground">Why Us</a>
         <a href="#services" className="hover:text-foreground">Services</a>
         <a href="#experts" className="hover:text-foreground">Experts</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-foreground">
+        <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-foreground">
           <Instagram className="h-4 w-4" /> Instagram
         </a>
       </div>

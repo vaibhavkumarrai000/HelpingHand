@@ -1,8 +1,7 @@
 import { Instagram, MessageCircleMore, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const instagramUrl = "https://instagram.com";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 const InstagramConnect = () => (
   <section id="instagram" className="container py-20">
@@ -19,9 +18,6 @@ const InstagramConnect = () => (
           <p className="max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
             If you want video editing or CV and resume help, you can message us directly on Instagram.
             We’ll guide you from there and connect you with the right service quickly.
-          </p>
-          <p className="text-sm font-medium text-foreground">
-            Share your Instagram handle with me later and I’ll replace this link everywhere.
           </p>
         </div>
 
@@ -47,7 +43,7 @@ const InstagramConnect = () => (
           </div>
 
           <Button asChild className="mt-2 w-full">
-            <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               Open Instagram
             </a>
           </Button>

@@ -2,7 +2,7 @@ import { Star, BadgeCheck, Instagram } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "sonner";
+import { INSTAGRAM_URL } from "@/lib/constants";
 
 const experts = [
   { name: "Shiven Mishra", skill: "CV Maker", badge: "Resume Building", rating: 5.0, price: "Contact on Instagram", img: "https://i.pravatar.cc/150?img=11" },
@@ -10,10 +10,6 @@ const experts = [
 ];
 
 const ExpertDirectory = () => {
-  const handleBook = () => {
-    toast.info("Please sign up or log in to book an expert!", { description: "After booking & payment, you'll be connected on Instagram." });
-  };
-
   return (
     <section id="experts" className="container py-20">
       <h2 className="mb-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
@@ -43,9 +39,11 @@ const ExpertDirectory = () => {
                 <span className="text-sm font-medium text-muted-foreground">{e.price}</span>
               </div>
               <div className="px-6 pb-6">
-                <Button className="w-full gap-2" onClick={handleBook}>
-                  <Instagram className="h-4 w-4" />
-                  Book & Chat on Instagram
+                <Button className="w-full gap-2" asChild>
+                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+                    <Instagram className="h-4 w-4" />
+                    Book & Chat on Instagram
+                  </a>
                 </Button>
               </div>
             </CardContent>

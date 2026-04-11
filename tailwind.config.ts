@@ -88,11 +88,20 @@ export default {
             transform: "translateX(-50%)",
           },
         },
+        marquee: {
+          from: {
+            transform: "translateX(0%)",
+          },
+          to: {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 25s linear infinite",
+        marquee: "marquee 25s linear infinite",
       },
     },
   },

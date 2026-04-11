@@ -48,12 +48,12 @@ const HeroSection = () => {
         >
           {slides.map((slide) => (
             <div key={slide.src} className="relative min-w-full h-full">
-              <img src={slide.src} alt={slide.alt} className="h-full w-full object-cover" />
+              <img src={slide.src} alt={slide.alt} className="h-full w-full object-cover opacity-50" />
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/45 to-background/75" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent_55%)]" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/45 to-background/75" /> */}
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2),transparent_55%)]" /> */}
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">

@@ -12,11 +12,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container flex h-16 items-center justify-between gap-4">
-        <a href="#" className="flex items-center gap-2">
-          <img src="/images/hhlogo.jpeg" alt="Helping Hand logo" className="h-8 w-8 rounded-full object-cover" />
-          <span className="text-lg font-bold tracking-wider text-foreground">HELPING HAND</span>
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
+      <div className="container flex h-20 items-center justify-between gap-4">
+        <a href="#" className="flex items-center gap-3 rounded-full px-2 py-1 transition-colors hover:bg-secondary/60">
+          <img src="/images/hhlogo.jpeg" alt="Helping Hand logo" className="h-12 w-12 rounded-full object-cover ring-1 ring-border shadow-sm" />
+          <span className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground sm:text-base">
+            Helping Hand
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

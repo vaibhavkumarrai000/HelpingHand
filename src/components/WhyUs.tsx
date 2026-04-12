@@ -19,18 +19,25 @@ const reasons = [
 ];
 
 const WhyUs = () => (
-  <section id="why-us" className="bg-secondary/40 py-20">
+  <section id="why-us" className="py-20">
     <div className="container">
-      <h2 className="mb-2 text-center text-3xl font-bold text-foreground sm:text-4xl">
-        WHY HELPING HAND?
-      </h2>
-      <p className="mb-12 text-center text-muted-foreground">
-        Built for authenticity, powered by real skills
-      </p>
-      <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+      <div className="mx-auto mb-12 max-w-2xl text-center">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+          Why Helping Hand
+        </p>
+        <h2 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+          Built for trust, clarity, and direct results
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          A cleaner experience for users who want quality work without friction.
+        </p>
+      </div>
+      <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
         {reasons.map((r) => (
-          <div key={r.title} className="flex flex-col items-center rounded-lg border border-border bg-card p-8 text-center">
-            <r.icon className="mb-4 h-10 w-10 text-primary" />
+          <div key={r.title} className="flex flex-col items-center rounded-3xl border border-border/70 bg-card p-8 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+              <r.icon className="h-7 w-7 text-primary" />
+            </div>
             <h3 className="mb-2 text-lg font-bold text-foreground">{r.title}</h3>
             <p className="text-sm text-muted-foreground">{r.desc}</p>
           </div>

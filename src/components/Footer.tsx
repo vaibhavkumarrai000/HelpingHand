@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="border-t border-border bg-background py-12">
     <div className="container flex flex-col items-center gap-6 text-center">
       <div className="flex items-center gap-2">
-        <img src="/images/hhlogo.jpeg" alt="Helping Hand logo" className="h-6 w-6 rounded-full object-cover" />
+        <img src="/images/hhlogo.jpeg" alt="Helping Hand logo" className="h-10 w-10 rounded-full object-cover" />
         <span className="font-bold tracking-wider text-foreground">HELPING HAND</span>
       </div>
       <div className="flex gap-6 text-sm text-muted-foreground">

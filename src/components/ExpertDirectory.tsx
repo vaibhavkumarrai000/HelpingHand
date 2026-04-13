@@ -25,23 +25,36 @@ type Expert = {
 
 const experts: Expert[] = [
   {
-    name: "Shiven Mishra",
-    skill: "CV Maker",
-    badge: "Resume Building",
-    rating: 5.0,
-    price: "Contact on Instagram",
-    img: "/images/shiven.jpeg",
-    experience: "3+ years",
-    specialty: "ATS-friendly resumes, executive CVs, and career profile rewrites",
-    summary: "Focused on clear formatting, strong positioning, and recruiter-friendly language.",
-    highlights: ["ATS optimization", "Career switch resumes", "LinkedIn-ready summaries"],
-    proofTitle: "CV Sample",
-    proofDescription: "View a resume sample uploaded by our team.",
-    proofLabel: "Open CV proof",
-    workDetails: ["Resume writing", "CV redesign", "Profile polishing"],
-    clientTypes: ["Students", "Freshers", "Job seekers"],
-    directLinks: [{ label: "Visit proof", href: "#" }],
-  },
+  name: "Shiven Mishra",
+  skill: "Tech Resume & ATS Specialist",
+  badge: "Resume Building",
+  rating: 5.0,
+  price: "Contact on Instagram",
+  img: "/images/shiven.jpeg",
+  experience: "4+ years",
+  specialty: "ATS-friendly formatting, tech industry resumes, and LinkedIn profile optimization",
+  summary: "I specialize in transforming average resumes into high-converting, recruiter-ready profiles. With a strong background in software development and hiring algorithms, I know exactly how to structure your skills and projects so they easily pass ATS screening and land you interviews.",
+  highlights: [
+    "ATS & Keyword Optimization",
+    "Action-driven bullet points",
+    "LinkedIn & GitHub Polishing"
+  ],
+  proofTitle: "CV Success Stories",
+  proofDescription: "Check out the professional resume formats and transformations I've delivered.",
+  workDetails: [
+    "CTO At Codetexa, a startup focused on AI-powered resume optimization",
+    "Redesigned and optimized resumes for B.Tech/CSE students and freshers",
+    "Structured technical projects and internships to highlight real-world impact",
+    "Provided 1-on-1 resume reviews and career positioning for tech roles",
+    "Crafted tailored CVs for career switches and premium internships"
+  ],
+  clientTypes: ["Engineering Students", "Tech Freshers", "Job Seekers"],
+  directLinks: [
+    { label: "View General CV Sample", href: "https://drive.google.com/file/d/1A1gK8MA1vsq7BVzzV6xHYPLWAbpeUidh/view?usp=sharing" },
+    { label: "View Specialized CV Sample", href: "https://drive.google.com/file/d/1tRrwLLDfSXOIVFpyhGjr_dvCvyYnROK5/view?usp=drive_link" },
+    ,
+  ],
+},
   {
     name: "Aman Singh",
     skill: "Video Editor",

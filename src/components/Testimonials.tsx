@@ -8,6 +8,7 @@ type Review = {
   name: string;
   rating: number;
   message: string;
+  avatar?: string;
   createdAt?: string;
 };
 
@@ -15,6 +16,8 @@ const API_URL = "http://localhost:5000/api/reviews";
 
 const getAvatarUrl = (name: string) =>
   `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}`;
+
+const getReviewAvatar = (review: Review) => review.avatar || getAvatarUrl(review.name);
 
 const Testimonials = () => {
   // Test karne ke liye thoda dummy data
@@ -28,7 +31,7 @@ const Testimonials = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [form, setForm] = useState({ name: "", rating: 5, message: "" });
+  const [form, setForm] = useState({ name: "", rating: 5, message: "", avatar: "" });
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -66,16 +69,32 @@ const Testimonials = () => {
 
       const savedReview = await response.json();
       setReviews((prev) => [savedReview, ...prev]);
-      setForm({ name: "", rating: 5, message: "" });
+      setForm({ name: "", rating: 5, message: "", avatar: "" });
     } catch (err) {
       console.error(err);
       // Fallback agar backend off ho: Local state me add karo
       const newLocalReview = { ...form, _id: Date.now().toString() };
       setReviews((prev) => [newLocalReview, ...prev]);
-      setForm({ name: "", rating: 5, message: "" });
+      setForm({ name: "", rating: 5, message: "", avatar: "" });
     } finally {
       setSubmitting(false);
     }
+  };
+
+  const handleAvatarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) {
+      setForm((prev) => ({ ...prev, avatar: "" }));
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === "string") {
+        setForm((prev) => ({ ...prev, avatar: reader.result }));
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   // Safe Fallback: Agar array chhota hai, toh usko bada kar lo taaki loop continuous lage
@@ -111,7 +130,7 @@ const Testimonials = () => {
             {displayReviews.map((review, index) => (
               <Card key={`track1-${review._id || index}-${index}`} className="w-[300px] shrink-0 border border-gray-200 bg-white shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <CardContent className="flex h-full flex-col items-center gap-4 p-6 text-center">
-                  <img src={getAvatarUrl(review.name)} alt="avatar" className="h-16 w-16 rounded-full border border-border bg-muted object-cover shadow-sm" />
+                  <img src={getReviewAvatar(review)} alt="avatar" className="h-16 w-16 rounded-full border border-border bg-muted object-cover shadow-sm" />
                   <p className="font-semibold text-black text-lg">{review.name}</p>
                   <div className="flex items-center justify-center gap-1">
                     {Array.from({ length: review.rating }).map((_, i) => (
@@ -128,7 +147,7 @@ const Testimonials = () => {
             {displayReviews.map((review, index) => (
               <Card key={`track2-${review._id || index}-${index}`} className="w-[300px] shrink-0 border border-gray-200 bg-white shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <CardContent className="flex h-full flex-col items-center gap-4 p-6 text-center">
-                  <img src={getAvatarUrl(review.name)} alt="avatar" className="h-16 w-16 rounded-full border border-border bg-muted object-cover shadow-sm" />
+                  <img src={getReviewAvatar(review)} alt="avatar" className="h-16 w-16 rounded-full border border-border bg-muted object-cover shadow-sm" />
                   <p className="font-semibold text-black text-lg">{review.name}</p>
                   <div className="flex items-center justify-center gap-1">
                     {Array.from({ length: review.rating }).map((_, i) => (
@@ -164,6 +183,23 @@ const Testimonials = () => {
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             className="min-h-[120px] rounded-md border border-black/15 bg-white px-4 py-3 text-center text-sm text-black placeholder:text-black/45 focus:border-black/40 focus:outline-none sm:col-span-2 resize-none"
           />
+          <div className="sm:col-span-2 rounded-md border border-black/15 bg-white p-3">
+            <label className="mb-2 block text-center text-[11px] font-bold uppercase tracking-widest text-black/60">
+              Profile Picture (Optional)
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleAvatarChange}
+              className="block w-full text-sm text-black file:mr-3 file:rounded-md file:border file:border-black/20 file:bg-black file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white hover:file:brightness-110"
+            />
+            {form.avatar && (
+              <div className="mt-3 flex items-center justify-center gap-3">
+                <img src={form.avatar} alt="Selected profile" className="h-12 w-12 rounded-full border border-black/20 object-cover" />
+                <span className="text-xs font-medium text-black/65">Preview</span>
+              </div>
+            )}
+          </div>
           <div className="sm:col-span-2">
             <Button type="submit" disabled={submitting} className="w-full h-12 border border-black/20 bg-gradient-to-r from-zinc-800 to-black font-bold tracking-widest text-white shadow-xl hover:brightness-125 cursor-pointer">
               <span className="flex items-center justify-center gap-2">

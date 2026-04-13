@@ -25,36 +25,26 @@ type Expert = {
 
 const experts: Expert[] = [
   {
-  name: "Shiven Mishra",
-  skill: "Tech Resume & ATS Specialist",
-  badge: "Resume Building",
-  rating: 5.0,
-  price: "Contact on Instagram",
-  img: "/images/shiven.jpeg",
-  experience: "4+ years",
-  specialty: "ATS-friendly formatting, tech industry resumes, and LinkedIn profile optimization",
-  summary: "I specialize in transforming average resumes into high-converting, recruiter-ready profiles. With a strong background in software development and hiring algorithms, I know exactly how to structure your skills and projects so they easily pass ATS screening and land you interviews.",
-  highlights: [
-    "ATS & Keyword Optimization",
-    "Action-driven bullet points",
-    "LinkedIn & GitHub Polishing"
-  ],
-  proofTitle: "CV Success Stories",
-  proofDescription: "Check out the professional resume formats and transformations I've delivered.",
-  workDetails: [
-    "CTO At Codetexa, a startup focused on AI-powered resume optimization",
-    "Redesigned and optimized resumes for B.Tech/CSE students and freshers",
-    "Structured technical projects and internships to highlight real-world impact",
-    "Provided 1-on-1 resume reviews and career positioning for tech roles",
-    "Crafted tailored CVs for career switches and premium internships"
-  ],
-  clientTypes: ["Engineering Students", "Tech Freshers", "Job Seekers"],
-  directLinks: [
-    { label: "View General CV Sample", href: "https://drive.google.com/file/d/1A1gK8MA1vsq7BVzzV6xHYPLWAbpeUidh/view?usp=sharing" },
-    { label: "View Specialized CV Sample", href: "https://drive.google.com/file/d/1tRrwLLDfSXOIVFpyhGjr_dvCvyYnROK5/view?usp=drive_link" },
-    ,
-  ],
-},
+    name: "Shiven Mishra",
+    skill: "CV Maker",
+    badge: "Resume Building",
+    rating: 5.0,
+    price: "Contact on Instagram",
+    img: "/images/shiven.jpeg",
+    experience: "3+ years",
+    specialty: "ATS-friendly resumes, executive CVs, and career profile rewrites",
+    summary: "Focused on clear formatting, strong positioning, and recruiter-friendly language.",
+    highlights: ["ATS optimization", "Career switch resumes", "LinkedIn-ready summaries"],
+    proofTitle: "CV Sample",
+    proofDescription: "View CV work and related proof links.",
+    proofLabel: "Open CV proof",
+    workDetails: ["Resume writing", "CV redesign", "Profile polishing"],
+    clientTypes: ["Students", "Freshers", "Job seekers"],
+    directLinks: [
+      { label: "View CV sample (Drive)", href: "https://drive.google.com/file/d/1dzfTBwgdHYGQ6eevA2Tw2P5Cwh4VPxh6/view?usp=sharing" },
+      { label: "Visit Shiven Portfolio", href: "https://smishra0606.github.io/shivenmishra-portfolio/" },
+    ],
+  },
   {
     name: "Aman Singh",
     skill: "Video Editor",
@@ -77,6 +67,7 @@ const experts: Expert[] = [
     ],
     clientTypes: ["Business clients", "Real estate clients", "Event management clients"],
     directLinks: [
+      { label: "Visit Aman Portfolio", href: "https://egamanportfolio.netlify.app/" },
       { label: "Visit Codetexa website", href: "https://codetexa.com" },
       { label: "Visit Codetexa Instagram", href: "https://www.instagram.com/codetexaofficial/" },
       { label: "Visit TIC Hackathon Instagram", href: "https://www.instagram.com/tic.hackathon/" },
@@ -89,17 +80,20 @@ const experts: Expert[] = [
     badge: "Portfolio Design",
     rating: 5.0,
     price: "Contact on Instagram",
-    img: "https://i.pravatar.cc/150?img=32",
+    img: "/images/shubham.jpeg",
     experience: "2+ years",
     specialty: "Student portfolios, personal websites, and clean project showcases",
     summary: "Builds polished portfolio layouts that help creators present their work with confidence.",
     highlights: ["Personal branding", "Project showcases", "Clean modern layouts"],
     proofTitle: "Portfolio Link",
-    proofDescription: "Check a live portfolio sample to review layout and presentation.",
-    proofLabel: "Open portfolio proof",
+    proofDescription: "Explore the portfolio links below to review design quality and project presentation.",
     workDetails: ["Personal websites", "Portfolio design", "Project case studies"],
     clientTypes: ["Students", "Creators", "Professionals"],
-    directLinks: [{ label: "Visit portfolio proof", href: "#" }],
+    directLinks: [
+      { label: "Portfolio 1", href: "https://smishra0606.github.io/shivenmishra-portfolio/" },
+      { label: "Portfolio 2", href: "https://vaibhavkumarrai000.github.io/VaibhavPortfolio000/" },
+      { label: "Portfolio 3", href: "https://egamanportfolio.netlify.app/" },
+    ],
   },
 ];
 
@@ -119,7 +113,7 @@ const pricingPlans = [
     tiers: [
       { label: "Basic", price: "249" },
       { label: "Higher", price: "399" },
-      { label: "Pro", price: "799" },
+      { label: "Pro", price: "699" },
     ],
     points: ["Max 3 minute video", "Reels and shorts", "Brand promo edits"],
   },

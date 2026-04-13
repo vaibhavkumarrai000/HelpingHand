@@ -9,10 +9,10 @@ const Footer = () => (
         <span className="font-serif font-semibold tracking-[0.12em] text-foreground">HELPING HAND</span>
       </div>
       <div className="flex gap-6 text-sm text-muted-foreground">
-        <a href="#why-us" className="hover:text-foreground">Why Us</a>
-        <a href="#services" className="hover:text-foreground">Services</a>
-        <a href="#experts" className="hover:text-foreground">Experts</a>
-        <a href="#faq" className="hover:text-foreground">FAQ</a>
+        <a href="/#why-us" className="hover:text-foreground">Why Us</a>
+        <a href="/#services" className="hover:text-foreground">Services</a>
+        <a href="/experts" className="hover:text-foreground">Experts</a>
+        <a href="/#faq" className="hover:text-foreground">FAQ</a>
         <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-foreground">
           <Instagram className="h-4 w-4" /> Instagram
         </a>

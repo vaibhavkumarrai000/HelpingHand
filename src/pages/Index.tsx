@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesCarousel from "@/components/ServicesCarousel";
+import PersonalIntroVideo from "@/components/PersonalIntroVideo";
 import WhyUs from "@/components/WhyUs";
-import ExpertDirectory from "@/components/ExpertDirectory";
+import ExpertsTeaser from "@/components/ExpertsTeaser";
 import FAQSection from "@/components/FAQSection";
 import Testimonials from "@/components/Testimonials";
 import InstagramConnect from "@/components/InstagramConnect";
@@ -13,8 +14,9 @@ const Index = () => (
     <Header />
     <HeroSection />
     <ServicesCarousel />
+    <PersonalIntroVideo />
     <WhyUs />
-    <ExpertDirectory />
+    <ExpertsTeaser />
     <FAQSection />
     <Testimonials />
     <InstagramConnect />

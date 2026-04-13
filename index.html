@@ -17,6 +17,17 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Lovable" />
     <meta name="twitter:image" content="/images/hhlogo.jpeg" />
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const redirectPath = params.get("p");
+        if (!redirectPath) return;
+
+        const cleanPath = redirectPath.startsWith("/") ? redirectPath : `/${redirectPath}`;
+        window.history.replaceState(null, "", cleanPath);
+      })();
+    </script>
   </head>
 
   <body>

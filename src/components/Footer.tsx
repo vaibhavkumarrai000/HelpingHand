@@ -1,7 +1,10 @@
 import { Instagram } from "lucide-react";
 import { INSTAGRAM_URL } from "@/lib/constants";
 
-const Footer = () => (
+const Footer = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
+  return (
   <footer className="border-t border-border bg-background py-12">
     <div className="container flex flex-col items-center gap-6 text-center">
       <div className="flex items-center gap-2">
@@ -9,10 +12,10 @@ const Footer = () => (
         <span className="font-serif font-semibold tracking-[0.12em] text-foreground">HELPING HAND</span>
       </div>
       <div className="flex gap-6 text-sm text-muted-foreground">
-        <a href="/#why-us" className="hover:text-foreground">Why Us</a>
-        <a href="/#services" className="hover:text-foreground">Services</a>
-        <a href="/experts" className="hover:text-foreground">Experts</a>
-        <a href="/#faq" className="hover:text-foreground">FAQ</a>
+        <a href={`${baseUrl}#why-us`} className="hover:text-foreground">Why Us</a>
+        <a href={`${baseUrl}#services`} className="hover:text-foreground">Services</a>
+        <a href={`${baseUrl}experts`} className="hover:text-foreground">Experts</a>
+        <a href={`${baseUrl}#faq`} className="hover:text-foreground">FAQ</a>
         <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-foreground">
           <Instagram className="h-4 w-4" /> Instagram
         </a>
@@ -20,6 +23,7 @@ const Footer = () => (
       <p className="text-xs text-muted-foreground">© 2026 Helping Hand. All rights reserved.</p>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;

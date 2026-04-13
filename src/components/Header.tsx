@@ -4,19 +4,20 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const baseUrl = import.meta.env.BASE_URL;
 
   const navLinks = [
-    { label: "Why Us", href: "/#why-us" },
-    { label: "Hire Expert", href: "/experts" },
-    { label: "Explore Services", href: "/#services" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "Why Us", href: `${baseUrl}#why-us` },
+    { label: "Hire Expert", href: `${baseUrl}experts` },
+    { label: "Explore Services", href: `${baseUrl}#services` },
+    { label: "FAQ", href: `${baseUrl}#faq` },
   ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/45">
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-24 bg-gradient-to-r from-cyan-200/20 via-transparent to-amber-100/20" />
       <div className="container relative z-10 flex h-20 items-center justify-between gap-4">
-        <a href="/" className="group relative flex items-center gap-3 rounded-full border border-border/60 bg-background/70 px-2 py-1.5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+        <a href={baseUrl} className="group relative flex items-center gap-3 rounded-full border border-border/60 bg-background/70 px-2 py-1.5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
           <div className="absolute -left-3 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-primary/70 blur-sm transition-opacity duration-300 group-hover:opacity-90" />
           <img src="/images/hhlogo.jpeg" alt="Helping Hand logo" className="h-11 w-11 rounded-full object-cover ring-1 ring-border shadow-sm" />
           <span className="font-serif text-sm font-semibold uppercase tracking-[0.14em] text-foreground sm:text-base">

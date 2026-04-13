@@ -9,7 +9,7 @@ const Experts = () => (
     <Header />
     <div className="container pt-6">
       <Button variant="outline" className="gap-2" asChild>
-        <a href="/">
+        <a href={import.meta.env.BASE_URL}>
           <ArrowLeft className="h-4 w-4" />
           Back to Home
         </a>

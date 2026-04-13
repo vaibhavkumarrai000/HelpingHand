@@ -32,6 +32,7 @@ const slides = [
 
 const HeroSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -80,7 +81,7 @@ const HeroSection = () => {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" className="gap-2 px-7 py-6 text-base font-semibold shadow-lg shadow-primary/15" asChild>
-              <a href="/experts">
+              <a href={`${baseUrl}experts`}>
                 Book an Expert Now
                 <ArrowRight className="h-4 w-4" />
               </a>

@@ -119,15 +119,13 @@ const FAQSection = () => (
 
     <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-card/90 p-5 shadow-sm sm:p-6">
-        <div className="relative overflow-hidden rounded-2xl border border-border/70">
-          <video
-            src="https://videos.pexels.com/video-files/7706434/7706434-hd_1920_1080_30fps.mp4"
-            className="h-64 w-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+        <div
+          className="relative h-64 overflow-hidden rounded-2xl border border-border/70 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.pexels.com/photos/7648040/pexels-photo-7648040.jpeg?cs=srgb&dl=pexels-ivan-samkov-7648040.jpg&fm=jpg')",
+          }}
+        >
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           <div className="absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
             Live Q&A Support

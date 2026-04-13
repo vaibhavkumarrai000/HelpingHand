@@ -107,7 +107,7 @@ const HeroSection = () => {
 
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-4">
             {[
-              { value: "2", label: "Core services" },
+              { value: "3", label: "Core services" },
               { value: "100%", label: "Direct contact" },
               { value: "24/7", label: "Accessible booking" },
             ].map((stat) => (

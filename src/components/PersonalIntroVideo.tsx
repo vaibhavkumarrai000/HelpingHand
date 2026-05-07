@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const REEL_URL = "https://www.instagram.com/reel/DXAvlNEkz4n/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
-const REEL_EMBED_URL = "https://www.instagram.com/reel/DXAvlNEkz4n/embed";
+const REEL_URL = "https://www.instagram.com/reel/DXn5l6-D_o_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==";
+const REEL_EMBED_URL = "https://www.instagram.com/reel/DXn5l6-D_o_/embed";
 
 const PersonalIntroVideo = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);

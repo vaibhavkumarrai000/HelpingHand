@@ -28,6 +28,10 @@ const slides = [
     src: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?cs=srgb&dl=pexels-goumbik-590016.jpg&fm=jpg",
     alt: "Professional resume layout on a work desk",
   },
+  {
+    src: "/images/hh.jpg",
+    alt: "Helping Hand premium booking experience",
+  },
 ];
 
 const HeroSection = () => {

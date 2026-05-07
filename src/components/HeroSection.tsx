@@ -5,6 +5,10 @@ import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 const slides = [
   {
+    src: "/images/hh.jpg",
+    alt: "Helping Hand premium booking experience",
+  },
+  {
     src: "https://images.pexels.com/photos/8100060/pexels-photo-8100060.jpeg?cs=srgb&dl=pexels-ron-lach-8100060.jpg&fm=jpg",
     alt: "Video editor working on color grading",
   },
@@ -27,10 +31,6 @@ const slides = [
   {
     src: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?cs=srgb&dl=pexels-goumbik-590016.jpg&fm=jpg",
     alt: "Professional resume layout on a work desk",
-  },
-  {
-    src: "/images/hh.jpg",
-    alt: "Helping Hand premium booking experience",
   },
 ];
 

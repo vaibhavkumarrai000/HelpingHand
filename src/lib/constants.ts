@@ -1,1 +1,1 @@
-export const INSTAGRAM_URL = "https://www.instagram.com/officialhelpinghand000?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+export const INSTAGRAM_URL = "https://www.instagram.com/officialhelping.hand000?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
